@@ -13,6 +13,8 @@ import {
   loadCSS,
 } from './lib-franklin.js';
 
+import { getEmailForm } from './forms-test.js';
+
 const LCP_BLOCKS = []; // add your LCP blocks to the list
 
 /**
@@ -103,10 +105,29 @@ function loadDelayed() {
   // load anything that can be postponed to the latest here
 }
 
+
+function checkCreateCollection()
+{
+    const currentUrl = window.location.href; // For the current page URL
+    const urlParams = new URLSearchParams(new URL(currentUrl).search);
+    let createCollection = urlParams.get('createCollection');
+
+    if (createCollection === 'y') {
+        console.log('createCollection:', createCollection);
+
+        const resultJSON=getEmailForm();
+
+        console.log(resultJSON);
+    }
+}
 async function loadPage() {
   await loadEager(document);
   await loadLazy(document);
   loadDelayed();
+
+  //Check if parameter createCollection=Y is in the URL
+  await checkCreateCollection();
 }
+
 
 loadPage();

@@ -1,0 +1,25 @@
+curl -s -i -X POST 'https://admin.hlx.page/form/{owner}/{repo}/{ref}/en/email-form.json' \
+--header 'Content-Type: application/json' \
+--data '{"data":{"firstName":"test"}}'
+
+
+
+https://main--adobe-gmo--hlxsites.hlx.page/drafts/tyrone/email-form.json
+
+https://main--franklin-demo--jwtnewbie.hlx.page/email-form.json
+
+
+
+Repo is adobe-gmo
+Owner is franklin-demo
+Ref is your branch name = main
+
+Samle Curl Command to POST data to Google Sheet called email-form
+
+curl -s -i -X POST 'https://admin.hlx.page/form/jwtnewbie/franklin-demo/main/email-form.json' \
+--header 'Content-Type: application/json' \
+--data '{"data":{"firstName":"Jane","lastName":"Wong","gender":"F","age":"28"}}'
+
+curl -s -i -X POST 'https://admin.hlx.page/form/jwtnewbie/franklin-demo/main/email-form.json' \
+--header 'Content-Type: application/json' \
+--data '{"data":{"firstName":"Jane","lastName":"Wong","gender":"F","age":"28"},{"firstName":"Jane","lastName":"Wong","gender":"F","age":"28"}}'
