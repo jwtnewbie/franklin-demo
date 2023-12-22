@@ -117,6 +117,7 @@ function checkCreateCollection()
 
         const resultJSON=getEmailForm();
 
+        console.log('RESPONSE JSON');
         console.log(resultJSON);
     }
 }

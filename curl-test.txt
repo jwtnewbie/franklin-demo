@@ -20,6 +20,18 @@ curl -s -i -X POST 'https://admin.hlx.page/form/jwtnewbie/franklin-demo/main/ema
 --header 'Content-Type: application/json' \
 --data '{"data":{"firstName":"Jane","lastName":"Wong","gender":"F","age":"28"}}'
 
-curl -s -i -X POST 'https://admin.hlx.page/form/jwtnewbie/franklin-demo/main/email-form.json' \
---header 'Content-Type: application/json' \
---data '{"data":{"firstName":"Jane","lastName":"Wong","gender":"F","age":"28"},{"firstName":"Jane","lastName":"Wong","gender":"F","age":"28"}}'
+
+The following URL http://localhost:3000/?createCollection=y
+
+Will run the code in /scripts/scripts.js function function checkCreateCollection()
+
+which calls the function getEmailForm()
+
+in forms-test.js and runs function getEmailForm()
+
+which reads the data from email-form.json resolves to https://main--franklin-demo--jwtnewbie.hlx.live/email-form.json
+
+So the data in Spread Sheet email-form
+
+The data by the CURL command enters the data into the Sheet called incoming.
+The data then has to be copied to the sheet called shared-default, and then the email-form spread sheet has to Previewed using the AEM plugin and then Published.

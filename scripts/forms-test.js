@@ -1,13 +1,23 @@
 import { fetchCached } from './fetch-util.js';
 
 export async function getEmailForm() {
-debugger;
   const response = await getConfig('email-form.json');
+
+  /*
   const result = {};
   response.data.forEach((row) => {
-    result[row.ID] = row.Value;
+    result[row.ID] = row;
   });
+
+  console.log('RESULT');
+  console.log(result);
+
+
   return result;
+
+  */
+
+  return response;
 }
 
 async function getConfig(filename) {
